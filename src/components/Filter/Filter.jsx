@@ -1,14 +1,14 @@
 import styles from './Filter.module.css';
 import PropTypes from 'prop-types';
 
-const Filter = ({ filter, onChange }) => {
+const Filter = ({ filter, onFilter }) => {
   return (
-    <input className={styles.filter}
-      type="text"
-      name="filter"
-      value={filter}
-      onChange={({ target }) => onChange(target.value)}
-      placeholder="Enter name for Search"
+    <input className = {styles.filter}
+      type = "text"
+      name = "filter"
+      value = {filter}
+      onChange = {onFilter}
+      placeholder = "Enter name for Search"
     />
   );
 };
@@ -16,6 +16,6 @@ const Filter = ({ filter, onChange }) => {
 export default Filter;
 
 Filter.propTypes = {
-  filter: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
+  onSufilterbmit: PropTypes.string,
+  onChange: PropTypes.func,
 };
